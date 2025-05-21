@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Cliente -->
     <ImageView
         android:id="@+id/iconCliente"
         android:layout_width="40dp"
@@ -27,7 +26,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="8dp"/>
 
-    <!-- Número Cliente -->
     <ImageView
         android:id="@+id/iconTelefono"
         android:layout_width="40dp"
@@ -48,7 +46,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="8dp"/>
 
-    <!-- Productos -->
     <ImageView
         android:id="@+id/iconProductos"
         android:layout_width="40dp"
@@ -69,7 +66,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="8dp"/>
 
-    <!-- Ubicación -->
     <ImageView
         android:id="@+id/iconUbicacion"
         android:layout_width="40dp"
@@ -90,7 +86,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="8dp"/>
 
-    <!-- Botones abajo -->
     <Button
         android:id="@+id/btnLlamar"
         android:layout_width="0dp"
