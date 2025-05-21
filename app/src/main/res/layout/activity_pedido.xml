@@ -1,10 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/pedidoRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PedidoActivity">
+    android:padding="16dp">
+
+    <!-- Cliente -->
+    <ImageView
+        android:id="@+id/iconCliente"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_cliente"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvNombreCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre Cliente"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/iconCliente"
+        app:layout_constraintTop_toTopOf="@id/iconCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Número Cliente -->
+    <ImageView
+        android:id="@+id/iconTelefono"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_telefono"
+        app:layout_constraintTop_toBottomOf="@id/iconCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/tvNumeroCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Número Cliente"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/iconTelefono"
+        app:layout_constraintTop_toTopOf="@id/iconTelefono"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Productos -->
+    <ImageView
+        android:id="@+id/iconProductos"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_productos"
+        app:layout_constraintTop_toBottomOf="@id/iconTelefono"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/tvProductos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Productos"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/iconProductos"
+        app:layout_constraintTop_toTopOf="@id/iconProductos"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Ubicación -->
+    <ImageView
+        android:id="@+id/iconUbicacion"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_ubicacion"
+        app:layout_constraintTop_toBottomOf="@id/iconProductos"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/tvUbicacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ubicación"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/iconUbicacion"
+        app:layout_constraintTop_toTopOf="@id/iconUbicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Botones abajo -->
+    <Button
+        android:id="@+id/btnLlamar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Llamar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toStartOf="@id/btnWsp"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/btnWsp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="WSP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnLlamar"
+        app:layout_constraintEnd_toStartOf="@id/btnMaps"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnMaps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="MAPS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnWsp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
